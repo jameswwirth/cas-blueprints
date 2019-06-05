@@ -1,2 +1,2 @@
-# cas_samples
-Repo containing sample VMware Cloud Automation Services Code
+# VMware CAS Blueprints
+Repo containing sample VMware Cloud Automation Services Cloud Assembly Blueprints

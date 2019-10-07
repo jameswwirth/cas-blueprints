@@ -1,5 +1,5 @@
 name: bitnami-tomcat
-version: 1.0
+version: 1.1
 formatVersion: 1
 inputs:
   SelectCloud:

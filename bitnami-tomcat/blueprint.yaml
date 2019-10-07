@@ -1,0 +1,38 @@
+name: bitnami-tomcat
+version: 1.0
+formatVersion: 1
+inputs:
+  SelectCloud:
+    type: string
+    enum:
+      - 'env:aws'
+  hostname1:
+    type: string
+    default: aws-machine
+  user:
+    type: string
+    title: Username for SSH
+    description: The username you would like to have for the installation.
+    default: demouser
+  sshkey:
+    type: string
+    encrypted: true
+    title: Enter SSH Key.
+    description: The SSH-Key for connectivity
+resources:
+  Cloud_Machine_1:
+    type: Cloud.Machine
+    properties:
+      image: ubuntu
+      flavor: medium
+      cloudConfig:
+        #cloud-config
+        hostname: '${input.hostname1}'
+        users:
+          - name: '${input.user}'
+            ssh-authorized-keys:
+              - '${input.sshkey}'
+            sudo:
+              - 'ALL=(ALL) NOPASSWD:ALL'
+            groups: sudo
+            shell: /bin/bash

@@ -8,12 +8,12 @@ inputs:
       - 'env:aws'
   hostname1:
     type: string
-    default: aws-machine
+    default: bitnami-tomcat
   user:
     type: string
     title: Username for SSH
     description: The username you would like to have for the installation.
-    default: demouser
+    default: vmware
   sshkey:
     type: string
     encrypted: true
@@ -24,7 +24,7 @@ resources:
     type: Cloud.Machine
     properties:
       image: ubuntu
-      flavor: medium
+      flavor: small
       cloudConfig:
         #cloud-config
         hostname: '${input.hostname1}'

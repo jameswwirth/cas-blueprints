@@ -23,7 +23,7 @@ resources:
   Cloud_Machine_1:
     type: Cloud.Machine
     properties:
-      image: bitnami-nginx
+      image: bitnami-nginx-1.16.1
       flavor: small
       cloudConfig:
         #cloud-config

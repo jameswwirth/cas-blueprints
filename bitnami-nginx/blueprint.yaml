@@ -1,4 +1,4 @@
-name: bitnami-tomcat
+name: bitnami-nginx
 version: 1.0
 formatVersion: 1
 inputs:
@@ -8,7 +8,7 @@ inputs:
       - 'env:aws'
   hostname1:
     type: string
-    default: bitnami-tomcat
+    default: bitnami-nginx
   user:
     type: string
     title: Username for SSH
@@ -23,7 +23,7 @@ resources:
   Cloud_Machine_1:
     type: Cloud.Machine
     properties:
-      image: ubuntu
+      image: bitnami-nginx
       flavor: small
       cloudConfig:
         #cloud-config
